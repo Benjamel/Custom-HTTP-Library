@@ -69,7 +69,7 @@
 * EasyHTTP Library
 * Library for making HTTP requests
 *
-* @version 2.0.0
+* @version 3.0.0
 * @Author Benjamin Meldal
 * @License MIT
 *
@@ -104,21 +104,21 @@
 //         })
 //     }
 
-    //make http put request
-    // put(url, data) {
-    //     return new Promise((resolve, reject) => {
-    //     fetch(url, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data => resolve(data))
-    //     .catch(err => reject(err));
-    //     })
-    // }
+//make http put request
+// put(url, data) {
+//     return new Promise((resolve, reject) => {
+//     fetch(url, {
+//         method: 'PUT',
+//         headers: {
+//             'Content-type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//     })
+//     .then(res => res.json())
+//     .then(data => resolve(data))
+//     .catch(err => reject(err));
+//     })
+// }
 
     //make an http delete request
 //     delete(url) {
@@ -138,4 +138,54 @@
 // }
 
 //ES7 newest way 
+// class EasyHTTP {
+    //make an HTTP get request
+//    async get(url) {
+//         const response = await fetch(url);
+//         const result = await response.json();
+//         return result;
+//     }
+// }
+
+//make an HTTP post request
+class EasyHTTP {
+    // async post(url, data) {
+    //    const response = await fetch(url, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-type': 'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    //    });
+
+    //    const result = await response.json();
+    //    return result;
+    // }
+
+    //make http put request
+    // async put(url, data) {
+    //     const response = await fetch(url, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //     const result = await response.json();
+    //     return result;
+    // }
+
+    //make an http delete request
+        async delete(url) {
+            const response = await fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            const result = await 'Resource deleted';
+            return result;
+        }
+    }
 
